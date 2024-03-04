@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { Outlet, Navigate, Link, useNavigate } from 'react-router-dom';
 import { grp3 } from '../assets'
-import { Outlet, Navigate } from 'react-router-dom';
 
 var loggedIn = false;
 
@@ -88,6 +87,7 @@ const Login = () => {
                         {buttonText}
                     </button>
                 </form>
+                <Link className='font-thin text-[#36A546] hover:font-light text-center'>Forgot Password?</Link>
                 {error && <p className='mt-4 text-red-500'>{error}</p>}
                 <p className='font-thin text-white text-center'>Use E-mail = <b className='text-green-500'>greendzine@gmail.com</b> && Password = <b className='text-green-500'>greendzine</b> for now.</p>
             </div>
