@@ -4,6 +4,7 @@ import { grp46, moptro } from '../assets'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSearch } from '@fortawesome/free-solid-svg-icons'
 import { employees } from '../Data/employeeData'
+import { Card } from '../components'
 
 const Employees = () => {
   const [employee, setEmployee] = useState('');
@@ -59,23 +60,12 @@ const Employees = () => {
         <button onClick={handleAllData} className='p-2 text center max-w-[400px] w-[90%] text-white bg-[#5E5E5E40] rounded-3xl hover:bg-transparent border border-[#5E5E5E40]'>All Employees</button>
         <div className='w-full flex flex-col gap-4 p-2 items-center overflow-scroll'>
           {data.map((employee) => (
-            <div key={employee.id} className='relative z-10 sm:w-[60%] w-[100%] odd:mr-auto even:ml-auto p-3 rounded-3xl flex flex-col gap-4 bg-[#5E5E5E40] text-[#ffffff90]'>
-              <div className='absolute right-2 top-2 z-20 flex justify-center items-center text-white border-2 border-[#000] rounded-full size-[32px]'>
-                {employee.emp_id}
-              </div>
-              <div className='w-full'>
-                <p className='flex gap-4'><span className='w-[70px] flex justify-between items-center'>EMP ID<span>:</span></span><b className='text-white'>{employee.emp_id}</b></p>
-              </div>
-              <div className='w-full'>
-                <p className='flex gap-4'><span className='w-[70px] flex justify-between items-center'>Name<span>:</span></span><b className='text-white'>{employee.name}</b></p>
-              </div>
-              <div className='w-full'>
-                <p className='flex gap-4'><span className='w-[70px] flex justify-between items-center'>DOB<span>:</span></span><b className='text-orange-400'>{employee.dob}</b></p>
-              </div>
-              <div className='w-full'>
-                <p className='flex gap-4'><span className='w-[70px] flex justify-between items-center'>Role<span>:</span></span><b className='text-[#36A546]'>{employee.role}</b></p>
-              </div>
-            </div>
+            <Card 
+              id={employee.emp_id}
+              name={employee.name}
+              dob={employee.dob}
+              role={employee.role}
+            />
           ))}
           {data.length === 0 && <h3 className='text-[24px] text-red-500 font-medium mt-2'>No Data Found</h3>}
         </div>

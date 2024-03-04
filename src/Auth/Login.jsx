@@ -31,6 +31,7 @@ const Login = () => {
                 navigate('/');
                 setButtonText('Login');
             } else {
+                setButtonText('Login');
                 setError('Invalid email or password');
             }
         }, 2500);
