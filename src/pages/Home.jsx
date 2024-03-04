@@ -11,28 +11,26 @@ const Home = () => {
         <div className='w-[90%] flex justify-end max-w-[800px]'>
           <img src={grp46} alt="call" className='size-[40px]' />
         </div>
-        <div className='w-[90%] flex justify-center max-w-[800px]'>
+        <div className='relative z-10 flex -mt-6'>
           <img src={moptro} alt="moptro" className='size-[70px]' />
-          {/* <div
-           className="absolute left-[55.5%] bg-[#5E5E5EB5] rounded-full size-[28px] flex justify-center items-center text-[#36A546] text-xs"
-           style={{
-            boxShadow: 'inset 0px 4px 0px #00000040',
-            filter: blur('2px'),
-            border: '1px solid #FFFEFE00'
-           }}
-        >
-          4
-        </div> */}
+          <div
+            className="absolute z-20 bg-[#5E5E5E40] rounded-full size-[36px] left-[65px] -top-[14px] flex justify-center items-center text-[#36A546] text-sm"
+            style={{
+              border: '1px solid #FFFEFE00'
+            }}
+          >
+            4
+          </div>
         </div>
         <div className='w-[90%] flex flex-col items-center gap-2 max-w-[800px] mt-[10px] bg-[#5E5E5E40] rounded-[26px]'
-        style={{
-          boxShadow: 'box-shadow: inset 0px 4px 0px #00000040'
-        }}
+          style={{
+            boxShadow: 'box-shadow: inset 0px 4px 0px #00000040'
+          }}
         >
           <div className='w-full p-4 bg-[#1A2C2C] text-center text-[#FFFFFF] rounded-full'>
             <p>Employee Productivity Dashboard</p>
           </div>
-          <div className='w-full p-4 flex flex-col gap-4'>
+          <div className='w-full p-4 flex flex-col gap-6 my-10'>
             <div className='w-full flex flex-col justify-center items-center gap-1'>
               <p className='text-white flex w-[90%] gap-2 justify-between'><span>Productivity on Monday</span><span className='text-[#36A546]'>4%</span></p>
               <ProgressBar className='w-full' maxCompleted={200} completed={4} customLabel=' ' baseBgColor='transparent' bgColor='#36A54680' height='15px' />
